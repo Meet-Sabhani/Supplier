@@ -106,7 +106,7 @@ nav ul li a:hover {
   .btn-send {
     display: none;
   }
-  nav ul{
+  nav ul {
     gap: 15px;
   }
   #menu {
@@ -116,7 +116,7 @@ nav ul li a:hover {
     padding: 0 16px;
     flex-direction: column;
   }
-  .show-menu{
+  .show-menu {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -128,7 +128,7 @@ nav ul li a:hover {
     height: 280px;
     padding-top: 30px;
   }
-  .show-btn{
+  .show-btn {
     display: block;
     position: absolute;
     top: 280px;
@@ -158,7 +158,7 @@ nav ul li a:hover {
 }
 
 .hero-text {
-  padding-top: 60px;
+  padding: 60px 0 50px;
 }
 
 .hero-left h1 {
@@ -291,9 +291,15 @@ nav ul li a:hover {
     flex-direction: column;
     height: unset;
   }
-  .hero-right img{
+  .hero-right img {
     width: 100%;
     position: unset;
+  }
+
+  .hero-left h1 {
+    font-size: 1.24rem;
+    line-height: 1.2;
+    font-weight: 500;
   }
 
   .hero-right::after {
@@ -348,6 +354,11 @@ nav ul li a:hover {
   padding: 10px;
   font-size: 16px;
   transition: 0.3s ease-in-out;
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .u-social i:hover {
@@ -450,10 +461,24 @@ nav ul li a:hover {
     flex-direction: column;
   }
   .read-left,
-  .read-right {
+  .read-right,
+  .read-right p,
+  .read-right b {
     width: 100%;
     margin: 0 auto;
     padding: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .read-sec-titel,
+  .read-sec-titel-right {
+    padding: 16px 32px;
+  }
+  .read-left b,
+  .read-left p {
+    line-height: 1.2;
+    font-size: 1.1rem;
   }
 }
 
@@ -660,9 +685,9 @@ nav ul li a:hover {
   border-radius: 27px;
   font-weight: 600;
   margin: 0 auto;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.partners-box a:hover{
+.partners-box a:hover {
   color: #000;
 }
 
@@ -792,8 +817,22 @@ nav ul li a:hover {
   width: 50%;
   margin: 0 auto;
   height: 300px;
-  display: flex;
   position: relative;
+}
+
+.overly {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000080;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.supplier-box:hover .overly {
+  opacity: 1;
 }
 
 .supplier-box img {
@@ -813,9 +852,14 @@ nav ul li a:hover {
   font-size: 60px;
   background-color: #eafa72;
   color: #000;
-  padding: 30px 38px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   transition: 0.7s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .supplier-box:hover i {
@@ -896,10 +940,10 @@ form button:hover {
   .contact form {
     width: 100%;
   }
-  .check-text{
+  .check-text {
     font-size: 1.25rem;
   }
-  form button{
+  form button {
     width: 200px;
   }
 }
@@ -917,8 +961,8 @@ footer {
   z-index: 1;
 }
 
-.footer-top::before{
-  content: '\e965';
+.footer-top::before {
+  content: "\e965";
   position: absolute;
   height: 200px;
   width: 200px;
@@ -930,11 +974,11 @@ footer {
   z-index: -1;
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .footer-top {
     padding: unset;
   }
-  .footer-top::before{
+  .footer-top::before {
     left: 0;
   }
 }
@@ -956,8 +1000,8 @@ footer {
 .footer-left a:hover {
   color: #646765;
 }
-.footer-left a:hover i {
-  color: #fff;
+.footer-left a:hover .footer-left a i {
+  background-color: #525653;
 }
 .footer-social {
   padding: 20px 0;
@@ -965,9 +1009,15 @@ footer {
 }
 .footer-bottom i {
   background-color: #646765;
+  color: #fff;
   padding: 7px 7px;
   margin-right: 10px;
   border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-social a {
   text-decoration: none;

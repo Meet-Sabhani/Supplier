@@ -14,8 +14,9 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 70px 80px;
+  padding: 70px 8%;
   max-width: 1600px;
+  width: 100%;
 }
 
 body {
@@ -95,9 +96,6 @@ nav ul li a:hover {
   display: none;
 }
 @media screen and (max-width: 1000px) {
-  .container {
-    padding: 70px 110px;
-  }
   nav {
     width: 75%;
     margin: 15px auto;
@@ -291,17 +289,9 @@ nav ul li a:hover {
     flex-direction: column;
     height: unset;
   }
-  .img-1 {
-    min-width: 90%;
-    left: 1rem;
-    height: 250px;
-  }
-  .hero-right img {
-    position: relative;
-  }
-  .img-3,
-  .img-4 {
-    min-width: 90%;
+  .hero-right img{
+    width: 100%;
+    position: unset;
   }
 
   .hero-right::after {
@@ -668,11 +658,17 @@ nav ul li a:hover {
   border-radius: 27px;
   font-weight: 600;
   margin: 0 auto;
+  transition: .3s ease-in-out;
+}
+.partners-box a:hover{
+  color: #000;
 }
 
 .partners img {
   position: absolute;
   width: 300px;
+  height: 270px;
+  object-fit: cover;
   border-radius: 10px;
 }
 

@@ -133,12 +133,15 @@ nav ul li a:hover {
     position: absolute;
     top: 280px;
   }
-
 }
 
-@media screen and (max-width: 750px) {
+
+@media screen and (max-width: 600px) {
   .container {
     padding: 70px 10%;
+  }
+  nav {
+    width: 100%;
   }
 }
 

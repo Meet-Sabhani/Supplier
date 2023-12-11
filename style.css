@@ -135,7 +135,6 @@ nav ul li a:hover {
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .container {
     padding: 70px 10%;
@@ -808,8 +807,9 @@ nav ul li a:hover {
 
 .supplier-box i {
   position: absolute;
-  top: 32%;
-  left: 42%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 60px;
   background-color: #eafa72;
   color: #000;
@@ -819,15 +819,12 @@ nav ul li a:hover {
 }
 
 .supplier-box:hover i {
-  transform: rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 
 @media (max-width: 1000px) {
   .supplier-box {
     width: 100%;
-  }
-  .supplier-box i{
-    left: 40%;
   }
 }
 
@@ -921,7 +918,7 @@ footer {
 }
 
 .footer-top::before{
-  content: '';
+  content: '\e965';
   position: absolute;
   height: 200px;
   width: 200px;
